@@ -54,18 +54,12 @@ function pr1Task3() {
     let numberB = parseInt(prompt("number b: "));
     let numberC = parseInt(prompt("number c: "));
     let maxNumber = numberA;
-    alert("entering IFs. numbers abc and max now: " + numberA + " " + numberB 
-            + " " + numberC + " " + maxNumber);
     if (numberB > maxNumber) {
         maxNumber = numberB;
     }
-    alert("checked B>max. numbers abc and max now: " + numberA + " " + numberB 
-        + " " + numberC + " " + maxNumber);
     if (numberC > maxNumber) {
         maxNumber = numberC;
     }
-    alert("checked C>max. numbers abc and max now: " + numberA + " " + numberB 
-        + " " + numberC + " " + maxNumber);
 
     console.log("The maximum is ", maxNumber);
 }
@@ -106,7 +100,9 @@ function pr1Task5() {
         return numberA + numberB;
     }
 
-    let summArrow = (numberA, numberB) => (numberA + numberB);
+    let summArrow = (numberA, numberB) => {
+        numberA + numberB
+    }
 
     summBasic(1, 2);
     summAnon(3, 4);
