@@ -85,16 +85,42 @@ function pr2Task3() {
     console.log("names array: ", getNames(users));
 
     function meanArray(arr){
-        // later, tired :c
-        return null;
+        mean = 0
+        for (i = 0; i < arr.length; i++) {
+            mean += parseInt(arr[i]);
+            console.log("elem: ", arr[i], "mean: ", mean);
+        }
+        mean /= arr.length;
+        console.log("mean: ", mean, "len: ", arr.length);
+        return mean;
     }
+
+    arr = [1, 5, 4, 3, 2];
+    console.log("arr: ", arr, "\nmean: ", meanArray(arr));
 
 }
 function pr2Task4() {
     // Задание 4 (копировать в браузер)
-    return null;
+    console.log("\n\n===Task 4: sets===");
+    
+    let set4 = new Set();
+    set4.add(1).add(2).add(3).add(4);
+    console.log("set4: ", set4);
+
+    set4.delete(1);
+    console.log("deleted first. set4 now: ", set4);
 }
 function pr2Task5() {
     // Задание 5 (копировать в браузер)
-    return null;
+    console.log("\n\n===Task 5: map===");
+
+    map5 = new Map();
+    map5.set(true, "first elem");
+    map5.set(2, null);
+    map5.set("3", "third elem");
+    console.log("map5 last elem value: ", map5.get("3"));
+
+    console.log("map5 before deletion: ", map5);
+    map5.delete(2);
+    console.log("map5 after deletion: ", map5);
 }
